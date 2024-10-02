@@ -4827,6 +4827,9 @@ static int _validate_and_set_defaults(slurm_conf_t *conf,
 		if (xstrcasestr(temp_str, "MAX_TRES"))
 			conf->priority_flags |= PRIORITY_FLAGS_MAX_TRES;
 
+		if (xstrcasestr(temp_str, "MAX_TRES_CPU_MEM"))
+			conf->priority_flags |= PRIORITY_FLAGS_MAX_TRES_CPU_MEM;
+
 		if (xstrcasestr(temp_str, "NO_NORMAL_ALL"))
 			conf->priority_flags |=
 				PRIORITY_FLAGS_NO_NORMAL_ASSOC |
