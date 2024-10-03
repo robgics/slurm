@@ -7232,8 +7232,9 @@ extern double assoc_mgr_tres_weighted(uint64_t *tres_cnt, double *weights,
 			 else {
 				to_bill_node = MAX(to_bill_node, tres_value);
 			 }
-		else
+		else {
 			to_bill_global += tres_value;
+		}
 
 		info("*****  robg   new bill node: %.2f", to_bill_node);
 		info("*****  robg   new bill gres: %.2f", billable_gres);
@@ -7246,7 +7247,7 @@ extern double assoc_mgr_tres_weighted(uint64_t *tres_cnt, double *weights,
 	billable_tres = to_bill_node + to_bill_global;
 
 	info("***** robg billable_tres = (%.2f)", billable_tres);
-	
+
 	debug3("TRES Weighted: %s = %f",
 	       (flags & PRIORITY_FLAGS_MAX_TRES) ?
 	       "MAX(node TRES) + SUM(Global TRES)" : "SUM(TRES)",
