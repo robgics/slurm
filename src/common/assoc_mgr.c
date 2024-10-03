@@ -7204,9 +7204,9 @@ extern double assoc_mgr_tres_weighted(uint64_t *tres_cnt, double *weights,
 		if (i == TRES_ARRAY_BILLING)
 			continue;
 
-		info("***** robg TRES Type: %s", tres_type);
-		info("***** robg   TRES Value: %.2f", tres_value);
-		info("***** robg   TRES Weight: %.2f", tres_weight);
+		printf("***** robg TRES Type: %s", tres_type);
+		printf("***** robg   TRES Value: %.2f", tres_value);
+		printf("***** robg   TRES Weight: %.2f", tres_weight);
 		
 		if (tres_cnt[i] == NO_CONSUME_VAL64)
 			continue;
@@ -7226,8 +7226,8 @@ extern double assoc_mgr_tres_weighted(uint64_t *tres_cnt, double *weights,
 		else
 			to_bill_global += tres_value;
 
-		info("*****  robg   new bill node: %.2f", to_bill_node);
-		info("*****  robg   new bill global: %.2f", to_bill_global);
+		printf("*****  robg   new bill node: %.2f", to_bill_node);
+		printf("*****  robg   new bill global: %.2f", to_bill_global);
 	}
 
 	billable_tres = to_bill_node + to_bill_global;
