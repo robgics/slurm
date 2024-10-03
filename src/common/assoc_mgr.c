@@ -7226,8 +7226,8 @@ extern double assoc_mgr_tres_weighted(uint64_t *tres_cnt, double *weights,
 		else
 			to_bill_global += tres_value;
 
-		info("*****  robg   new bill node: %.2f", to_bill_node)
-		info("*****  robg   new bill global: %.2f", to_bill_global)
+		info("*****  robg   new bill node: %.2f", to_bill_node);
+		info("*****  robg   new bill global: %.2f", to_bill_global);
 	}
 
 	billable_tres = to_bill_node + to_bill_global;
