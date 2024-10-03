@@ -7232,6 +7232,7 @@ extern double assoc_mgr_tres_weighted(uint64_t *tres_cnt, double *weights,
 			 else {
 				to_bill_node = MAX(to_bill_node, tres_value);
 			 }
+	    }
 		else {
 			to_bill_global += tres_value;
 		}
